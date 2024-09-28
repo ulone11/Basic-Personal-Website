@@ -1,0 +1,432 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+
+  margin: 0;
+
+  display: block;
+  flex-direction: column;
+}
+
+header.navbar-container {
+  width: 100%;
+  padding-block: 0.2rem;
+  margin-inline: auto;
+  background-color: #093139;
+  position: fixed;
+  opacity: 0%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+
+  z-index: 999;
+  transition: all 0.5s;
+}
+
+header.navbar-container.scrolled {
+  opacity: 100%;
+}
+
+header.navbar-container .logo img {
+  width: 20px;
+  padding-block: 1rem;
+
+  transition: all 0.5s;
+}
+
+header.navbar-container .logo img.scrolled {
+  width: 20px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 99px;
+
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li a:hover {
+  background-color: white;
+  color: #093139;
+}
+
+main {
+  flex: 1;
+
+  width: 100%;
+  margin-inline: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+}
+
+main .content article {
+  padding: 0rem 4rem;
+}
+
+main .content article.intro {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.intro-desc {
+  flex: 1.5;
+  padding-left: 6rem;
+}
+
+.intro-desc .title {
+  margin-block: 1rem;
+  color: #093139;
+
+  font-size: 3rem;
+}
+
+.intro-desc p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.intro-desc button {
+  padding: 1rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+
+  background-color: #f2c94c;
+
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #093139;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.intro-desc button:hover {
+  border: 3px solid #093139;
+  background-color: transparent;
+
+  color: #093139;
+}
+
+.intro-image {
+  display: flex;
+  flex: 1;
+}
+
+.intro-image img {
+  width: 350px;
+  margin: auto;
+}
+
+main .content article.experience {
+  height: 100vh;
+  flex: 1;
+  display: flex;
+  padding-left: 0;
+  gap: 2rem;
+
+  width: 100%;
+  align-items: center;
+  background-color: #093139;
+  color: white;
+}
+
+article.experience .exp-image {
+  flex: 1;
+  display: flex;
+}
+
+article.experience .exp-image img {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.exp-desc {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-desc h1 {
+  font-size: 3rem;
+}
+
+.job-desc {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.job-card-1,
+.job-card-2 {
+  flex: 1;
+  background-color: #ffffff1d;
+  border-radius: 25px;
+  padding: 2rem;
+}
+/* bikin card */
+
+.job-desc h2 {
+  color: #f2c94c;
+  margin: 0;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.job-desc p {
+  line-height: 1.6rem;
+}
+
+.job-dom {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.image-container {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.image-wrapper {
+  display: flex;
+  align-items: top;
+  gap: 1.5rem;
+}
+
+.image-wrapper img {
+  height: 2.5rem;
+}
+
+aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+  transition: all 0.5s;
+}
+
+aside .contact.active {
+  transform: translateX(0px);
+}
+
+aside .contact {
+  transform: translateX(120px);
+  height: 100%;
+  display: flex;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.contact h3 {
+  display: flex;
+  color: white;
+}
+
+aside .contact ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #093139;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+aside .contact li {
+  list-style-type: none;
+}
+
+aside .contact li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+
+  transform: all 0.5s ease-in-out;
+}
+
+aside .contact li a:hover {
+  color: #f2c94c;
+}
+
+aside .contact img {
+  width: 2rem;
+}
+
+aside .arrow-trigger {
+  position: fixed;
+  transform: translateX(60px);
+  height: 100%;
+  display: flex;
+  z-index: 1;
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow-trigger.active {
+  transform: translateX(-20px);
+}
+
+.arrow-trigger ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #093139;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.arrow-trigger li {
+  list-style-type: none;
+}
+
+.arrow-trigger li i {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #f2c94c;
+
+  transform: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1096px) {
+  header.navbar-container {
+    padding-block: 0;
+    z-index: 0;
+  }
+
+  header.navbar-container .logo img {
+    width: 20px;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+
+  main .content article {
+    padding: 2rem;
+  }
+
+  main .content article.intro {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .intro-desc {
+    padding: 5rem;
+    padding-top: 0;
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro-image {
+    flex: 2;
+    order: -1;
+    align-items: center;
+  }
+
+  .intro-image img {
+    width: 300px;
+  }
+
+  .intro-desc button {
+    margin-block-end: 2rem;
+  }
+
+  main .content article.experience {
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+  }
+
+  article.experience .exp-image img {
+    object-fit: cover;
+    object-position: 50% 12%;
+  }
+
+  .exp-image {
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .exp-desc {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .job-desc {
+    padding: 0rem 2rem;
+  }
+
+  aside {
+    opacity: 100%;
+  }
+}
+
+@media screen and (max-width: 896px) {
+  .intro-image img {
+    width: 250px;
+  }
+
+  .intro-desc {
+    flex: 3;
+  }
+}

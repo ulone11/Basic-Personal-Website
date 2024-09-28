@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Ulwan!</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Google Font Raleway -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <img src="img/logo.svg" alt="One Logo">
+        </div>
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#introduction">Hello!</a></li>
+                <li><a href="#experience">Experiences</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <article class="intro" id="introduction">
+                <div class="intro-desc">
+                    <h1 class="title">Hello, I'm Ulwan!</h1>
+                    <p>
+                        Versatile professional with 2+ years of experience in multimedia design and growing expertise in
+                        backend development. Proven ability to create visually compelling content and develop efficient,
+                        scalable backend solutions. Skilled in Adobe Suite, Figma for design, and JavaScript, Node.js
+                        for
+                        backend development, looking to leverage a unique combination of technical and creative skills
+                        in a
+                        role that bridges design and software engineering.
+                    </p>
+                    <button>Look at my CV</button>
+                </div>
+                <div class="intro-image">
+                    <img src="img/profile.png" alt="Profile Image">
+                </div>
+            </article>
+            <article class="experience" id="experience">
+                <div class="exp-image"><img src="img/exp-image.png" alt=""></div>
+                <div class="exp-desc">
+                    <h1 class="title">Experience</h1>
+                    <div class="job-desc">
+                        <div class="job-card-1">
+                            <h2 class="job-title">Graphic Designer</h2>
+                            <p class="job-dom">Funderland Indonesia | '24</p>
+                            <p>Led the creation of over 60 event materials and the development of a company profile
+                                website, increasing event attendance by 30% and boosting online traffic by 25% within
+                                two weeks.
+                            </p>
+                        </div>
+                        <div class="job-card-2">
+                            <h2 class="job-title">Staff Multimedia</h2>
+                            <p class="job-dom">MAN 2 Model Medan | '21-'23</p>
+                            <p>
+                                Produced over 100 visual assets and managed live streaming events, enhancing brand
+                                consistency and increasing audience engagement by 20%.
+                            </p>
+                        </div>
+                    </div>
+                    <h2 class="tools">Tools</h2>
+                    <div class="image-container">
+                        <div class="image-wrapper">
+                            <div><img src="img/tools/logos_figma.png" alt=""></div>
+                            <div><img src="img/tools/skill-icons_photoshop.png" alt=""></div>
+                            <div><img src="img/tools/skill-icons_illustrator.png" alt=""></div>
+                            <div><img src="img/tools/skill-icons_premiere.png" alt=""></div>
+                            <div><img src="img/tools/skill-icons_javascript.png" alt=""></div>
+                            <div><img src="img/tools/logos_nodejs.png" alt=""></div>
+                            <div><img src="img/tools/logos_blender.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <aside>
+            <div class="arrow-trigger">
+                <ul>
+                    <li>
+                        <i class="fas fa-angle-left"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <h3>Contact</h3>
+                    </li>
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href=""><img src="img/logo.png" alt=""></a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2024, Ulone
+    </footer>
+</body>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('.navbar-container')
+        const logo = document.querySelector('.logo img')
+        // const aside = document.querySelector('.contact')
+
+        if (window.scrollY > 0) {
+            header.classList.add('scrolled')
+            logo.classList.add('scrolled')
+
+        } else {
+            header.classList.remove('scrolled')
+            logo.classList.remove('scrolled')
+
+        }
+    })
+
+    const arrowTrigger = document.querySelector('aside .arrow-trigger')
+    const contact = document.querySelector('aside .contact')
+    arrowTrigger.addEventListener('click', () => {
+        if (!arrowTrigger.classList.contains('active')) {
+            arrowTrigger.classList.add('active')
+            arrowTrigger.querySelector('i').classList.replace('fa-angle-left', 'fa-angle-right')
+            contact.classList.add('active')
+        } else {
+            contact.classList.remove('active')
+            arrowTrigger.querySelector('i').classList.replace('fa-angle-right', 'fa-angle-left')
+            arrowTrigger.classList.remove('active')
+        }
+    })
+    // function clickAside() {
+    //     aside.classList.add('scrolled')
+    // }
+</script>
+
+</html>
